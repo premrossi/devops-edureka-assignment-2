@@ -33,7 +33,7 @@ pipeline{
 
         stage('Deploy') {
             steps {
-                echo 'Deploying the artifact'
+                echo 'Deploying the artifact';
                 sshagent(['ec2-tomcat-ssh-id']) {
                     sh '''
                     scp target/SimpleMavenWebAppProject-1.0-SNAPSHOT.war ubuntu@ec2-13-235-0-125.ap-south-1.compute.amazonaws.com:/opt/tomcat/webapps
