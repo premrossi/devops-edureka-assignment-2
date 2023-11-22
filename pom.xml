@@ -10,21 +10,6 @@
   <packaging>war</packaging>
   <name>Simple Webapp Application</name>
 
-  <properties>
-    <cx.version>3.0-RC1</cx.version>
-    <cx.port>8180</cx.port>
-    <cx.router>com.example.Main</cx.router>
-  </properties>
-
-  <dependencies>
-    <!-- Logging -->
-    <dependency>
-      <groupId>ch.qos.logback</groupId>
-      <artifactId>logback-classic</artifactId>
-      <version>0.9.26</version>
-    </dependency>
-  </dependencies>
-
   <build>
 
     <plugins>
@@ -35,12 +20,6 @@
             <configuration>
                 <path>/</path>
                 <port>8080</port>
-            </configuration>
-        </plugin>
-            <plugin>
-            <artifactId>maven-war-plugin</artifactId>
-            <configuration>
-            <webXml>src/main/webapp/WEB-INF/web.xml</webXml>
             </configuration>
         </plugin>
     <plugin>
