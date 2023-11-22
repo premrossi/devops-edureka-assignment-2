@@ -5,8 +5,8 @@
                              http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.example</groupId>
-  <artifactId>SimpleMavenWebAppProject</artifactId>
-  <version>1.0-SNAPSHOT</version>
+  <artifactId>prem-edureka-aws-devops-assignment</artifactId>
+  <version>1.0.0</version>
   <packaging>war</packaging>
   <name>Simple Webapp Application</name>
 
