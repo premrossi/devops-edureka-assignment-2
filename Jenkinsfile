@@ -38,7 +38,7 @@ pipeline{
                     sh '''
                     [ -d ~/.ssh ] || mkdir ~/.ssh && chmod 0700 ~/.ssh
                     ssh-keyscan -t rsa,dsa ec2-13-235-0-125.ap-south-1.compute.amazonaws.com >> ~/.ssh/known_hosts
-                    scp target/SimpleMavenWebAppProject-1.0-SNAPSHOT.war ubuntu@ec2-13-235-0-125.ap-south-1.compute.amazonaws.com:/opt/tomcat/webapps
+                    sudo scp target/SimpleMavenWebAppProject-1.0-SNAPSHOT.war ubuntu@ec2-13-235-0-125.ap-south-1.compute.amazonaws.com:/opt/tomcat/apache-tomcat-9.0.83/webapps
                     ssh ubuntu@ec2-13-235-0-125.ap-south-1.compute.amazonaws.com "sudo service tomcat restart"
                     '''
                 }
