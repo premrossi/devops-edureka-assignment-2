@@ -34,4 +34,26 @@
       </plugin>
     </plugins>
   </build>
+<profile>
+      <id>default-tools.jar</id>
+      <activation>
+        <file>
+          <missing>${java.home}/../lib/tools.jar</missing>
+        </file>
+      </activation>
+      <dependencies>
+        <dependency>
+          <groupId>org.jboss.as</groupId>
+          <artifactId>jboss-as-ejb3</artifactId>
+          <version>7.5.0.Final-redhat-21</version>
+          <scope>provided</scope>
+          <exclusions>
+            <exclusion>
+              <groupId>com.sun</groupId>
+              <artifactId>tools</artifactId>
+            </exclusion>
+          </exclusions>
+        </dependency>
+      </dependencies>
+    </profile>
 </project>
